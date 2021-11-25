@@ -28,5 +28,8 @@ urlpatterns = [
 
   path('songs/<int:pk>/delete/', views.SongDelete.as_views(), name='songs_delete'),
 
+
+  path(),
+
   path("accounts/signup/", views.signup, name="signup")
 ]
