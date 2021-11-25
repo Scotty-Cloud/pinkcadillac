@@ -11,3 +11,11 @@ from .models import Movie, Song, Photo
 from .forms import ReleaseDate
 
 # Create your views here.
+
+class Home(LoginView):
+  template_name = "home.html"
+
+def about(request):
+  return render(request, 'about.html')
+
+
