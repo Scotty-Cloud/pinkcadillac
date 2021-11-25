@@ -27,6 +27,6 @@ urlpatterns = [
   path('songs/<int:pk>/update/', views.SongUpdate.as_view(), name='songs_update'),
 
   path('songs/<int:pk>/delete/', views.SongDelete.as_views(), name='songs_delete'),
-  
 
+  path("accounts/signup/", views.signup, name="signup")
 ]
