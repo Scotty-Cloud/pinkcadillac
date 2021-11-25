@@ -29,7 +29,7 @@ urlpatterns = [
   path('songs/<int:pk>/delete/', views.SongDelete.as_views(), name='songs_delete'),
 
 
-  path(),
+  path('movies/<int:movie_id>/add_photo/', views.add_photo, name="add_photo"),
 
   path("accounts/signup/", views.signup, name="signup")
 ]
