@@ -20,6 +20,10 @@ urlpatterns = [
 
   path('songs/create/', views.SongCreate.as_view(), name='songs_create'),
 
+  path('songs/<int:pk>/', views.SongDetail.as_view(), name='songs_detail'),
+
+  path('songs/', views.SongList.as_views(), name='songs_index'),
+
   
 
 ]
