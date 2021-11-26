@@ -41,3 +41,11 @@ class Release(models.Model):
   )
   movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
+  class Meta:
+    ordering = ['-date']
+
+  def __str__(self):
+    return f"{self.get_enjoy_dispaly()} on {self.date}"
+
+  
+
