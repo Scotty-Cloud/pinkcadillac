@@ -37,5 +37,25 @@ class MovieCreate(LoginRequiredMixin, CreateView):
   fields = ['name', 'description' 'recommend']
 
   def form_valid(self, form):
-    
+    form.instance.user = self.request.user
+    return super().form_valid(form)
+
+class MovieUpdate(LoginRequiredMixin, UpdateView):
+  model = Movie
+  fields = ['name', 'description' 'recommend']
+
+class MovieDelete(LoginRequiredMixin, DeleteView):
+  model = Movie
+  success_url = '/movies/'
+
+@login_required
+def add_releaseYr(request, movie_id):
+  form = ReleaseForm(request.POST)
+  if form.is_valid():
+    new_releaseYr = form.save(commit=False)
+    new_releaseYr.movie_id = movie_id
+    new_releaseYr.save()
+  return redirect("movies_detail", movie_id=movie_id)
+
+  
 
