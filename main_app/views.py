@@ -29,8 +29,7 @@ def movies_detail(request, movie_id):
   songs_movies_doesnt_have = Song.objects.exclude( id__in = movie.songs.all().values_list('id'))
   release_form = ReleaseForm()
   return render(request, 'movies/index.html', {
-    'movie' : movie, 'release_form' : 'songs' : songs_movies_doesnt_have,
-  })
+    'movie' : movie, 'release_form' : 'songs' : songs_movies_doesnt_have,})
 
 class MovieCreate(LoginRequiredMixin, CreateView):
   model = Movie
