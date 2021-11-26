@@ -57,5 +57,13 @@ def add_releaseYr(request, movie_id):
     new_releaseYr.save()
   return redirect("movies_detail", movie_id=movie_id)
 
-  
+class SongCreate(LoginRequiredMixin, CreateView):
+  model = Song
+  field = '__all__'
+
+class SongList(LoginRequiredMixin, ListView):
+  model = Song
+
+class SongDetail(LoginRequiredMixin, DetailView):
+  model = Song
 
