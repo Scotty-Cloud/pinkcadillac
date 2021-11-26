@@ -67,3 +67,13 @@ class SongList(LoginRequiredMixin, ListView):
 class SongDetail(LoginRequiredMixin, DetailView):
   model = Song
 
+class SongUpdate(LoginRequiredMixin, UpdateView):
+  model = Song
+  fields = ['name']
+
+class SongDelete(LoginRequiredMixin, DeleteView):
+  model = Song
+  success_url = '/songs/'
+
+
+
