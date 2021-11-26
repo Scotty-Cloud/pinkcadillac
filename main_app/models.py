@@ -32,3 +32,12 @@ class Movie(models.Model):
   def get_absolute_url(self):
     return reverse("movies_detail", kwargs={"pk": self.id})
   
+class Release(models.Model):
+  date = models.DateField("Release Date")
+  enjoy = models.CharField(
+    max_length=1,
+    choices=ENJOY,
+    default=ENJOY[0][0]
+  )
+  movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+
