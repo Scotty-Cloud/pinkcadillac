@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+  
+<div class="card" style="border-color: {{ song.name }}">
+  <div class="card-bg" style="background-color: {{ song.name }}"></div>
+  <div class="card-content">
+    <h2>{{ song.name }}</h2>
+  </div>
+</div>
+<a href="{% url 'songs_update' song.id %}" class="btn warn">Edit</a>
+<a href="{% url 'songs_delete' song.id %}" class="btn danger">Delete</a>
+
+{% endblock %}
