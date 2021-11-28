@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css" 
+  rel="stylesheet" 
+/>
+<link rel="stylesheet" href="{% static 'css/mcdp.css' %}">
+<script 
+  src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js"
+>
+</script>
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/movie-detail.css' %}"
+/>
+<script defer src="{% static 'js/movie-detail.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<section class="movie-container">
+  <div class="movie-img">
+    {% if movie.photo.url %}
+      <img 
+        src="{{movie.photo.url}}" 
+        alt="A photo of {{movie.name}}"
+        class="usr-img"
+      >
+    {% else %}
+      <img 
+        src="{% static 'images/' %}" 
+        alt="elvis"
+      >
+    {% endif %}
+  </div>
+  <div class="movie-details">
+    <h1>{{ movie.name }}</h1>
+    <p>{{ movie.description }}</p>
+    <div class="movie-actions">
+      <a href="{% url 'movies_update' movie.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'movies_delete' movie.id %}" class="btn danger">Delete</a>
+    </div>
+<div class="feedings-toy-container">
+  <section class="feedings">
+    <div class="subsection-title">
+      <h2>Songs</h2>
+      <img 
+        src="{% static 'images/' %}" 
+        alt=""
+      />
+      <img 
+        src="{% static 'images/' %}"
+        alt=""
+      />
+      <img 
+        src="{% static 'images/' %}" 
+        alt=""
+      />
+    </div>
+    <h3>Add Release</h3>
+    <form
+      action="{% url 'add_releaseYr' movie.id %}"
+      method="post"
+      class="subsection-content"
+    >
+      {% csrf_token %}
+      {{ release_form.as_p }}
+      <button type="submit" class="btn submit">Add Release</button>
+    </form>
+  <section class="songs">
+    <div class="subsection-title">
+      <h2>Toys</h2>
+      <img src="{% static 'images/' %}" alt="" />
+      <img src="{% static 'images/' %}" alt="" />
+      <img src="{% static 'images/' %}" alt="" />
+    </div>
+{% endblock %}
