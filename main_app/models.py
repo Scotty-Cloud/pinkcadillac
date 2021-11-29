@@ -23,7 +23,7 @@ class Movie(models.Model):
   name = models.CharField(max_length=100)
   description = models.CharField(max_length=250)
   recommend = models.CharField(max_length=25)
-  songs = models.ManyToManyField(Song)
+  # songs = models.ManyToManyField(Song)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):

@@ -7,8 +7,10 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Movie, Song, Photo
+from .models import Movie, Song
 from .forms import ReleaseForm
+import boto3
+
 
 # Create your views here.
 
@@ -29,7 +31,7 @@ def movies_detail(request, movie_id):
   songs_movies_doesnt_have = Song.objects.exclude( id__in = movie.songs.all().values_list('id'))
   release_form = ReleaseForm()
   return render(request, 'movies/index.html', {
-    'movie' : movie, 'release_form' : release_form, 'songs' : songs_movies_doesnt_have,})
+    'movie' : movie, 'release_form' : release_form})
 
 class MovieCreate(LoginRequiredMixin, CreateView):
   model = Movie

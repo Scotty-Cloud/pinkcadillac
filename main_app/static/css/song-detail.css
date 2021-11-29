@@ -1,4 +1,4 @@
-main {
+/* main {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -49,4 +49,4 @@ main {
   margin: 0;
   font-size: var(--font-reg);
   z-index: 1;
-}
+} */

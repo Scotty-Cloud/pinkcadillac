@@ -21,13 +21,13 @@
       <a href="{% url 'movies_detail' movie.id %}">
         <div class="card-content">
           <div class="card-img-container">
-            {% if movie.photo.url %}
+            {% comment %} {% if movie.photo.url %}
               <img 
                 src="{{movie.photo.url}}" 
                 alt="A photo of {{movie.name}}"
                 class="usr-img"
                   >
-            {% else %}
+            {% else %} {% endcomment %}
               <img 
                 src="{% static 'images/' %}" 
                 alt="elvis"

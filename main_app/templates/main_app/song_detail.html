@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% comment %} {% extends 'base.html' %} 
 {% load static %} 
 
 {% block head %}
@@ -20,4 +20,4 @@
 <a href="{% url 'songs_update' song.id %}" class="btn warn">Edit</a>
 <a href="{% url 'songs_delete' song.id %}" class="btn danger">Delete</a>
 
-{% endblock %}
+{% endblock %} {% endcomment %}

@@ -23,13 +23,13 @@
 
 <section class="movie-container">
   <div class="movie-img">
-    {% if movie.photo.url %}
+    {% comment %} {% if movie.photo.url %}
       <img 
         src="{{movie.photo.url}}" 
         alt="A photo of {{movie.name}}"
         class="usr-img"
       >
-    {% else %}
+    {% else %} {% endcomment %}
       <img 
         src="{% static 'images/' %}" 
         alt="elvis"
@@ -43,8 +43,8 @@
       <a href="{% url 'movies_update' movie.id %}" class="btn warn">Edit</a>
       <a href="{% url 'movies_delete' movie.id %}" class="btn danger">Delete</a>
     </div>
-<div class="song-container">
-  <section class="feedings">
+{% comment %} <div class="song-container">
+  <section class="song">
     <div class="subsection-title">
       <h2>Songs</h2>
       <img 
@@ -59,7 +59,7 @@
         src="{% static 'images/' %}" 
         alt=""
       />
-    </div>
+    </div> {% endcomment %}
     <h3>Add Release</h3>
     <form
       action="{% url 'add_releaseYr' movie.id %}"
