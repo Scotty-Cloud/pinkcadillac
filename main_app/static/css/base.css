@@ -1,6 +1,6 @@
 html { 
   box-sizing: border-box;
-  cursor: url(images/GuitarCursor.png), auto;
+  cursor: url(/static/images/GuitarCursor.png), auto;
 }
 
 /* The Universal Selector */
