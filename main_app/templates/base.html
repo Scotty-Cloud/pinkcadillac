@@ -29,10 +29,8 @@
     <nav>
       <ul>
         {% if user.is_authenticated%}
-          <li><a href="{% url 'movies_index' %}">All movies_index</a></li>
-          {% comment %} <li><a href="{% url 'songs_index' %}">All Songs</a></li> {% endcomment %}
+          <li><a href="{% url 'movies_index' %}">All Movies</a></li>
           <li><a href="{% url 'movies_create' %}">Add Movies</a></li>
-          {% comment %} <li><a href="{% url 'songs_create' %}">Add Songs</a></li> {% endcomment %}
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'logout' %}">Log out</a></li>
         {% else %}
@@ -45,7 +43,7 @@
   </header>
   <main>
     {% block content %}
-    {% endblock %}
+    {% endblock content %}
   </main>
 </body>
 </html>

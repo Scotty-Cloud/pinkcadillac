@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static%}
+{% load static %}
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}"/>
@@ -7,12 +7,12 @@
 
 {% block content %}
 
-<div class ="page-header">
+<div class="page-header">
   <h1>Sign Up</h1>
-  <img src="{% static 'images/' %}" alt="elivsLogo"/>
+  {% comment %} <img src="{% static 'images/' %}" alt=""/> {% endcomment %}
 </div>
 {% if error_message %}
-  <p class ="red-text">{{ error_message }}</p>
+  <p class="red-text">{{ error_message }}</p>
 {% endif %}
 <form action="" method="post" class="form-container" autocomplete="off">
   {% csrf_token %}

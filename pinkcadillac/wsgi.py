@@ -14,3 +14,6 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pinkcadillac.settings')
 
 application = get_wsgi_application()
+
+# <div class="movie-details">
+#     <h1>{{ movie.name }}</h1>
