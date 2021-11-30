@@ -12,9 +12,10 @@ ENJOY = (
 # Create your models here.
 class Movie(models.Model):
   name = models.CharField(max_length=100)
-  description = models.CharField(max_length=250)
-  recommend = models.CharField(max_length=25)
+  description = models.CharField(max_length=250) # maybe change to TextField(?)
+  recommend = models.CharField(max_length=25)    # maybe change to TextField(?)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
+  date = models.DateField("Release Date")
 
   def __str__(self):
     return self.name
@@ -23,7 +24,7 @@ class Movie(models.Model):
     return reverse("movies_detail", kwargs={"movie_id": self.id})
   
 class Release(models.Model):
-  date = models.DateField("Release Date")
+  # date = models.DateField("Release Date")
   enjoy = models.CharField(
     max_length=1,
     choices=ENJOY,
@@ -31,8 +32,6 @@ class Release(models.Model):
   )
   movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
-  class Meta:
-    ordering = ['-date']
 
   def __str__(self):
     return f"{self.get_release_dispaly()} on {self.date}"

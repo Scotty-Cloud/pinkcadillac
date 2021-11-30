@@ -20,3 +20,21 @@
 {% endblock %}
 
 {% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h1>{% block title %} {{ movie.title }} {% endblock title %}</h1>
+        <p class=" movie-description ">{{ movie.description }}</p>
+        <p class="card-text ">{{ movie.recommend}}</p>
+      </div>
+    </div>
+    <div class="thread-actions">
+      <a href="{% url 'movies_update' movie.id  %}" class="btn warn">Edit</a>
+      <a href="{% url 'movies_delete' movie.id  %}" class="btn danger">Delete</a>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

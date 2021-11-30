@@ -29,13 +29,13 @@ def movies_index(request):
 def movies_detail(request, movie_id):
   movie = Movie.objects.get(id=movie_id)
   release_form = ReleaseForm()
-  return render(request, 'movies/index.html', {
+  return render(request, 'movies/detail.html', {
     'movie' : movie, 'release_form' : release_form})
 
 
 class MovieCreate(LoginRequiredMixin, CreateView):
   model = Movie
-  fields = ['name', 'description' 'recommend']
+  fields = ['name', 'description', 'recommend', 'date']
 
   def form_valid(self, form):
     form.instance.user = self.request.user
@@ -43,7 +43,7 @@ class MovieCreate(LoginRequiredMixin, CreateView):
 
 class MovieUpdate(LoginRequiredMixin, UpdateView):
   model = Movie
-  fields = ['name', 'description' 'recommend']
+  fields = ['name', 'description', 'recommend']
 
 class MovieDelete(LoginRequiredMixin, DeleteView):
   model = Movie
