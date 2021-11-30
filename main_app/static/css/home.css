@@ -4,6 +4,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   height: 100%;
+  background: #f0ead6;
 }
 
 main > section {
