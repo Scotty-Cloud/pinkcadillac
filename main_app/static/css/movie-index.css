@@ -10,6 +10,7 @@
   margin: 10px;
   border: var(--borders);
   box-shadow: var(--card-box-shadow);
+  background: #c9c0a1;
 }
 
 .card-content {

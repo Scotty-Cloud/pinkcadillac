@@ -1,15 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
 
-
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}"/>
+{% endblock %}
 
 {% block content %}
 
 <div class="about">
+
   <h1> about elvis presley </h1>
   <hr>
+
   <p>
-    you ain nuthin bout a hound dog, cryin all the time
+    VIVA LAS VEGAS!
   </p>
+
 </div>
 {% endblock %}
 
