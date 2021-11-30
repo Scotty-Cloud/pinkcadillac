@@ -1,5 +1,5 @@
 html {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 /* The Universal Selector */
@@ -26,26 +26,27 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   min-height: 100vh;
-  --nav-bg: rgba(104, 197, 248, .7);
-  --nav-bg-ff: rgba(104, 197, 248, .9);
-  --borders: rgb(36, 116, 248) solid 2px;
-  --text-color: rgb(17, 20, 17);
-  --link-hover-color: rgb(16, 56, 158);
+  --nav-bg: rgba(108, 68, 201, 0.7);
+  --nav-bg-ff: #171717;
+  --borders: rgb(128, 9, 0) solid 2px;
+  --text-color: rgb(196, 89, 89);
+  --link-hover-color: rgb(128, 9, 0);
   --button-bg: rgb(245, 245, 245);
-  --button-bg-hover: rgb(226, 226, 226);
-  --submit: rgb(26, 128, 0);
+  --button-bg-hover: rgb(143, 201, 218);
+  --submit: rgb(128, 9, 0);
   --warn: rgb(255, 102, 0);
   --danger: rgb(220, 20, 30);
   --secondary: rgb(57, 57, 57);
-  --card-box-shadow: 5px 5px 6px -1px #AAA;
+  --card-box-shadow: 5px 5px 6px -1px #171717;
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
   --font-xl: 2.4rem;
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
+  background: #f0ead6;
 }
-
+/* rgb(183, 218, 143,) */
 header {
   width: 100%;
   background: var(--nav-bg-ff);
@@ -54,6 +55,7 @@ header {
 
 nav {
   margin: 10px;
+  box-shadow: 0 0 10px rgb(210, 22, 8);
 }
 
 ul {
@@ -86,6 +88,7 @@ nav ul {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+ 
 }
 
 nav li {
@@ -96,12 +99,14 @@ nav li {
   margin: auto;
   padding: 10px 20px 0;
   max-width: 500px;
+  box-shadow: 0 0 10px rgb(210, 22, 8);
 }
 
 .page-header {
   display: flex;
   align-items: center;
   margin: 20px;
+  /* color:white; */
 }
 
 .btn {
@@ -155,6 +160,7 @@ nav li {
 .page-header img:first-of-type {
   margin-left: 20px;
 }
+
 
 @media only screen and (min-width: 768px) {
   header {
