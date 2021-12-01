@@ -14,6 +14,9 @@ A place where all people can get together and bond over the movies and songs per
 📡 Web App Images 📡
 ====================
 
+<img src="https://i.imgur.com/Uv2yRJh.png">
+<img src="https://imgur.com/pykxDAo.png">
+<img src="https://imgur.com/Yk849pH.png">
 
 🧰 Technologies Used 🧰
 ========================
