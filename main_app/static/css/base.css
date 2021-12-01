@@ -45,7 +45,10 @@ body {
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
-  background: #f0ead6;
+  background: url('https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A62bfa79e-1f2e-11e9-a46f-08f9738d6b2b?source=ig');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
 }
 
 header {
@@ -101,6 +104,10 @@ nav li {
   padding: 10px 20px 0;
   max-width: 500px;
   box-shadow: 0 0 10px rgb(210, 22, 8);
+}
+
+.title {
+  width: 256px;
 }
 
 .page-header {
