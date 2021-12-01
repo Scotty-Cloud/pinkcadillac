@@ -36,6 +36,7 @@ def movies_detail(request, movie_id):
 class MovieCreate(LoginRequiredMixin, CreateView):
   model = Movie
   fields = ['name', 'description', 'recommend', 'date']
+  success_url = '/movies/'
 
   def form_valid(self, form):
     form.instance.user = self.request.user
