@@ -1,3 +1,75 @@
-.about {
-  font-size: 30px;
+body {
+  background: url('https://c4.wallpaperflare.com/wallpaper/196/245/217/elvis-presley-drawing-hd-wallpaper-preview.jpg');
+  
 }
+div {
+  background-size: cover;
+  position: relative;
+  margin: 30px 0 0 0;
+  border-radius: 15px;
+}
+
+.about h1 {
+   font-size:30px;
+   font-family: 'Della Respira';
+   text-align: center;
+   -webkit-animation: glow 1s ease-in-out infinite alternate;
+   -moz-animation: glow 1s ease-in-out infinite alternate;
+   animation: glow 1s ease-in-out infinite alternate;
+}
+
+.life h1 {
+  font-size:30px;
+  font-family: 'Della Respira';
+  text-align: center;
+   -webkit-animation: glow 1s ease-in-out infinite alternate;
+   -moz-animation: glow 1s ease-in-out infinite alternate;
+   animation: glow 1s ease-in-out infinite alternate;
+}
+
+.fame h1 {
+  font-size:30px;
+  font-family: 'Della Respira';
+  text-align: center;
+   -webkit-animation: glow 1s ease-in-out infinite alternate;
+   -moz-animation: glow 1s ease-in-out infinite alternate;
+   animation: glow 1s ease-in-out infinite alternate;
+}
+
+.about h2 {
+  font-family: 'Eagle Lake';
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+}
+
+.life h2 {
+  font-family: 'Eagle Lake';
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+}
+
+.fame h2 {
+  font-family: 'Eagle Lake';
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px grey, 0 0 40px grey, 0 0 50px grey, 0 0 60px grey, 0 0 70px grey;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #171717, 0 0 40px #171717, 0 0 50px #171717, 0 0 60px #171717, 0 0 70px #171717;
+  }
+}
+

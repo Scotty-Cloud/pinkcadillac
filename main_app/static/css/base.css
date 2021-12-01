@@ -35,19 +35,19 @@ body {
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(143, 201, 218);
   --submit: rgb(128, 9, 0);
-  --warn: rgb(255, 102, 0);
+  --warn: rgb(47, 0, 255);
   --danger: rgb(220, 20, 30);
   --secondary: rgb(57, 57, 57);
-  --card-box-shadow: 5px 5px 6px -1px #171717;
+  --card-box-shadow: 5px 5px 6px -1px rgb(210, 22, 8);
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
   --font-xl: 2.4rem;
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
-  background: #b2beb5;
+  background: #f0ead6;
 }
-/* rgb(183, 218, 143,) */
+
 header {
   width: 100%;
   background: var(--nav-bg-ff);
@@ -169,7 +169,7 @@ nav li {
     display: flex;
     flex-direction: row;
     top: 0;
-    align-items: center;
+   
   }
 
   main {
@@ -179,14 +179,16 @@ nav li {
 
   nav,
   .header-logo-container {
+    
     margin: 10px 0;
     padding: 0 15px;
-  }
+  } 
 
   /* visual fix to help align logo */
   .header-logo-container {
+    
     padding-top: 3px;
-  }
+  } 
 
   nav {
     margin-left: auto;
@@ -199,6 +201,7 @@ nav li {
   }
 
   .header-logo-container {
+    
     width: 213px;
   }
 
